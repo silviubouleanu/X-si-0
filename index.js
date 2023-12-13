@@ -88,7 +88,7 @@ function resetGame() {
         gameBoard[i] = Array(boardSize).fill('');
         }
         currentPlayer = 'X';
-    }
+}
 
 let container = document.getElementById('game-container');
 container.appendChild(createTable());
