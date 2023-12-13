@@ -1,6 +1,6 @@
 const boardSize = 3;
 let gameBoard = [];
-let currentPlayer = 'X'; 
+let currentPlayer = 'X';
 
 function createTable() {
     let table = document.createElement('table');
@@ -44,7 +44,7 @@ function checkWin() {
         if (gameBoard[i][0] != '' &&
             gameBoard[i][0] == gameBoard[i][1] &&
             gameBoard[i][1] == gameBoard[i][2]) {
-            return true; 
+            return true;
         }
     }
 
@@ -52,22 +52,22 @@ function checkWin() {
         if (gameBoard[0][j] != '' &&
             gameBoard[0][j] == gameBoard[1][j] &&
             gameBoard[1][j] == gameBoard[2][j]) {
-            return true; 
+            return true;
         }
     }
 
     if (gameBoard[0][0] != '' &&
         gameBoard[0][0] == gameBoard[1][1] &&
         gameBoard[1][1] == gameBoard[2][2]) {
-        return true; 
+        return true;
     }
 
     if (gameBoard[0][2] != '' &&
         gameBoard[0][2] == gameBoard[1][1] &&
         gameBoard[1][1] == gameBoard[2][0]) {
-        return true; 
+        return true;
 
-    return false;
+        return false;
     }
 }
 
@@ -86,7 +86,7 @@ function resetGame() {
     gameBoard = [];
     for (let i = 0; i < boardSize; ++i) {
         gameBoard[i] = Array(boardSize).fill('');
-        }
+    }
     currentPlayer = 'X';
 }
 
